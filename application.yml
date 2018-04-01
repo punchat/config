@@ -1,3 +1,5 @@
+server:
+  port: ${PORT}
 eureka:
   instance:
     prefer-ip-address: true
