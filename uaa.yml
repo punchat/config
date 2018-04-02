@@ -1,1 +1,6 @@
-
+security:
+  oauth2:
+    client:
+      access-token-uri: http://uaa:9999/oauth/token
+      client-secret: pass
+      client-id: auth

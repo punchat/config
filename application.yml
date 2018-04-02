@@ -1,5 +1,11 @@
 server:
   port: ${PORT}
+uaa:
+  client:
+    enabled: true
+    jwt:
+      key:
+        uri: http://uaa:9999/oauth/token_key
 eureka:
   instance:
     prefer-ip-address: true
