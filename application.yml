@@ -12,10 +12,10 @@ uaa:
     id: ${clientId}
     secret: ${clientSecret:pass}
     scope: server
-    access-token-uri: http://uaa:9999/oauth/token
+    access-token-uri: ${accessTokenUri:http://uaa:9999/oauth/token}
     jwt:
       key:
-        uri: http://uaa:9999/oauth/token_key
+        uri: ${accessKeyUri:http://uaa:9999/oauth/token_key}
 spring:
   rabbitmq:
     host: ${rabbitmqHost:rabbitmq}
