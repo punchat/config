@@ -11,6 +11,7 @@ uaa:
     enabled: true
     secret: ${clientSecret:pass}
     id: ${clientId}
+    scope: server
     jwt:
       key:
         uri: http://uaa:9999/oauth/token_key
