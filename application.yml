@@ -9,6 +9,8 @@ eureka:
 uaa:
   client:
     enabled: true
+    secret: ${clientSecret:pass}
+    id: ${clientId}
     jwt:
       key:
         uri: http://uaa:9999/oauth/token_key
