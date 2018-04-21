@@ -1,0 +1,5 @@
+security:
+  oauth2:
+    client:
+      client-secret: ${clientSecret:pass}
+      client-id: ${clientId:messaging}
