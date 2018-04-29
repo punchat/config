@@ -24,3 +24,10 @@ uaa:
         - refresh_token
         - implicit
         - password
+    -
+      client-id: ${MESSAGING_SERVICE_CLIENT_ID:messaging}
+      client-secret: ${MESSAGING_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
