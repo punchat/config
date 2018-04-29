@@ -4,3 +4,23 @@ security:
       access-token-uri: http://uaa:9999/oauth/token
       client-secret: ${clientSecret:pass}
       client-id: ${clientId:auth}
+uaa:
+  clients:
+    -
+      client-id: ${ID_SERVICE_CLIENT_ID:id}
+      client-secret: ${ID_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
+    -
+      client-id: ${OPENID_CLIENT_ID:client}
+      client-secret: ${OPENID_CLIENT_SECRET:secret}
+      scopes:
+        - openid
+      grant-types:
+        - client_credentials
+        - authorization_code
+        - refresh_token
+        - implicit
+        - password
