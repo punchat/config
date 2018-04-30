@@ -4,6 +4,13 @@ security:
       access-token-uri: ${accessTokenUri:http://uaa:9999/oauth/token}
       client-secret: ${clientSecret:pass}
       client-id: ${clientId:auth}
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: accountCreatedEventsTopic
+          content-type: application/json
 uaa:
   clients:
     -

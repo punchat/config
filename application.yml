@@ -22,9 +22,3 @@ spring:
     port: ${rabbitmqPort:5672}
     username: ${rabbitmqUsername:guest}
     password: ${rabbitmqPassword:guest}
-  cloud:
-    stream:
-      bindings:
-        output:
-          destination: accountCreatedEventsTopic
-          content-type: application/json
