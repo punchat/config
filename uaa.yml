@@ -9,7 +9,7 @@ spring:
     stream:
       bindings:
         output:
-          destination: accountCreatedEventsTopic
+          destination: events.users.created
           content-type: application/json
 uaa:
   clients:

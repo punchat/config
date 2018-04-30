@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        userCreatedEvents:
+          destination: events.users.created
+          content-type: application/json
