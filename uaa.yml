@@ -8,7 +8,7 @@ spring:
   cloud:
     stream:
       bindings:
-        output:
+        accountCreatedEvents:
           destination: events.users.created
           content-type: application/json
 uaa:

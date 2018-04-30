@@ -2,6 +2,6 @@ spring:
   cloud:
     stream:
       bindings:
-        userCreatedEvents:
+        accountCreatedEvents:
           destination: events.users.created
           content-type: application/json
