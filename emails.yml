@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${mailUsername:punchat.application@gmail.com}
+    password: ${mailPassword:OdEOrshebVeytc0}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
