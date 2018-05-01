@@ -4,4 +4,6 @@ spring:
       bindings:
         accountCreatedEvents:
           destination: events.users.created
+          group: messaging-group
+          durableSubscription: true
           content-type: application/json

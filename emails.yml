@@ -15,4 +15,6 @@ spring:
       bindings:
         newEmailsEvents:
           destination: events.emails.created
+          group: emails-senders-group
+          durableSubscription: true
           content-type: application/json
