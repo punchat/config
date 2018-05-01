@@ -38,3 +38,10 @@ uaa:
         - server
       grant-types:
         - client_credentials
+    -
+      client-id: ${EMAIL_SENDER_SERVICE_CLIENT_ID:emails}
+      client-secret: ${EMAIL_SENDER_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
