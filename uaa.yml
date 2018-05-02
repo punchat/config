@@ -45,3 +45,10 @@ uaa:
         - server
       grant-types:
         - client_credentials
+    -
+      client-id: ${AM_SERVICE_CLIENT_ID:am}
+      client-secret: ${AM_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
