@@ -1,11 +1,11 @@
 zuul:
   routes:
     id:
-      path: /id**
+      path: /id/**
       serviceId: id
     uaa:
-      path: /uaa**
+      path: /uaa/**
       serviceId: uaa
     messaging:
-      path: /messaging**
+      path: /messaging/**
       serviceId: messaging
