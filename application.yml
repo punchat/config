@@ -11,6 +11,9 @@ uaa:
       key:
         uri: ${accessKeyUri:http://gateway:8080/uaa/oauth/token_key}
 spring:
+  cloud:
+    stream:
+      default-binder: rabbit
   rabbitmq:
     host: ${rabbitmqHost:rabbitmq}
     port: ${rabbitmqPort:5672}
