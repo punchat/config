@@ -9,6 +9,7 @@ spring:
     stream:
       bindings:
         accountCreatedEvents:
+          binder: rabbit
           destination: events.users.created
           content-type: application/json
 uaa:
