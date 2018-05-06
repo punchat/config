@@ -9,3 +9,7 @@ zuul:
     messaging:
       path: /messaging/**
       serviceId: messaging
+spring:
+  cloud:
+    stream:
+      default-binder: consul
