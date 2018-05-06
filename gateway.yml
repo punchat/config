@@ -1,0 +1,11 @@
+zuul:
+  routes:
+    id:
+      path: /id**
+      serviceId: id
+    uaa:
+      path: /uaa**
+      serviceId: uaa
+    messaging:
+      path: /messaging**
+      serviceId: messaging
