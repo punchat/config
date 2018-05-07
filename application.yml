@@ -10,11 +10,6 @@ uaa:
     jwt:
       key:
         uri: ${accessKeyUri:http://gateway:8080/uaa/oauth/token_key}
-  rabbitmq:
-    host: ${rabbitmqHost:rabbitmq}
-    port: ${rabbitmqPort:5672}
-    username: ${rabbitmqUsername:guest}
-    password: ${rabbitmqPassword:guest}
 swagger:
   enabled: true
   security:
@@ -24,3 +19,8 @@ spring:
     consul:
       discovery:
         instance-id: ${spring.application.name}:${random.value}
+  rabbitmq:
+    host: ${rabbitmqHost:rabbitmq}
+    port: ${rabbitmqPort:5672}
+    username: ${rabbitmqUsername:guest}
+    password: ${rabbitmqPassword:guest}
