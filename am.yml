@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    bindings:
+      inviteToChannelCreatedEvents:
+        destination: events.invitation.channel.created
+        content-type: application/json
+      inviteToWorkspaceCreatedEvents:
+        destination: events.invitation.workspace.created
+        content-type: application/json
+      inviteToChannelAcceptedEvents:
+        destination: events.invitation.channel.accepted
+        content-type: application/json
+      accessCodeGeneratedEvents:
+        destination: events.accesscode.generated
+        content-type: application/json
