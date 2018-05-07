@@ -1,0 +1,47 @@
+security:
+  oauth2:
+    client:
+      access-token-uri: ${accessTokenUri:http://gateway:8080/uaa/oauth/token}
+      client-secret: ${clientSecret:pass}
+      client-id: ${clientId:auth}
+spring:
+  cloud:
+    stream:
+      bindings:
+        accountCreatedEvents:
+          destination: events.users.created
+          content-type: application/json
+uaa:
+  clients:
+    -
+      client-id: ${ID_SERVICE_CLIENT_ID:id}
+      client-secret: ${ID_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
+    -
+      client-id: ${OPENID_CLIENT_ID:client}
+      client-secret: ${OPENID_CLIENT_SECRET:secret}
+      scopes:
+        - openid
+      grant-types:
+        - client_credentials
+        - authorization_code
+        - refresh_token
+        - implicit
+        - password
+    -
+      client-id: ${MESSAGING_SERVICE_CLIENT_ID:messaging}
+      client-secret: ${MESSAGING_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
+    -
+      client-id: ${EMAIL_SENDER_SERVICE_CLIENT_ID:emails}
+      client-secret: ${EMAIL_SENDER_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
