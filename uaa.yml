@@ -11,6 +11,10 @@ spring:
         accountCreatedEvents:
           destination: events.users.created
           content-type: application/json
+management:
+  health:
+    rabbit:
+      enabled: false
 uaa:
   clients:
     -
