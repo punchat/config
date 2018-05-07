@@ -9,3 +9,6 @@ zuul:
     messaging:
       path: /messaging/**
       serviceId: messaging
+    config:
+      path: /config/**
+      serviceId: config
