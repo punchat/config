@@ -5,7 +5,7 @@ zuul:
       serviceId: id
     uaa:
       path: /uaa/**
-      serviceId: uaa
+      serviceId: uaams
     messaging:
       path: /messaging/**
       serviceId: messaging
