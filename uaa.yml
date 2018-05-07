@@ -7,6 +7,7 @@ security:
 spring:
   cloud:
     stream:
+      default-binder: consul
       bindings:
         accountCreatedEvents:
           binder: rabbit
