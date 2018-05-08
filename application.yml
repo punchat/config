@@ -21,7 +21,7 @@ spring:
         instance-id: ${spring.application.name}:${random.value}
         prefer-ip-address: true
   rabbitmq:
-    host: ${rabbitmqHost:rabbitmq}
+    host: ${rabbitmqHost:rabbitmq_server}
     port: ${rabbitmqPort:5672}
     username: ${rabbitmqUsername:guest}
     password: ${rabbitmqPassword:guest}
