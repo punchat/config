@@ -1,7 +1,7 @@
 security:
   oauth2:
     client:
-      access-token-uri: ${accessTokenUri:http://uaa:9999/oauth/token}
+      access-token-uri: ${accessTokenUri:http://gateway:8080/uaa/oauth/token}
       client-secret: ${clientSecret:pass}
       client-id: ${clientId:auth}
 spring:

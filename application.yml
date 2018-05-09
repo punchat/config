@@ -1,22 +1,25 @@
 server:
   port: ${port}
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: ${serviceUrlDefaultZone:http://discovery:8761/eureka}
 uaa:
   client:
     enabled: true
     id: ${clientId}
     secret: ${clientSecret:pass}
     scope: server
-    access-token-uri: ${accessTokenUri:http://uaa:9999/oauth/token}
+    access-token-uri: ${accessTokenUri:http://gateway:8080/uaa/oauth/token}
     jwt:
       key:
-        uri: ${accessKeyUri:http://uaa:9999/oauth/token_key}
+        uri: ${accessKeyUri:http://gateway:8080/uaa/oauth/token_key}
+swagger:
+  enabled: true
+  security:
+    access-token-uri: ${accessTokenUri:http://gateway:8080/uaa/oauth/token}
 spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}:${random.value}
+        prefer-ip-address: true
   rabbitmq:
     host: ${rabbitmqHost:rabbitmq}
     port: ${rabbitmqPort:5672}

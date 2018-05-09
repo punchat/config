@@ -1,0 +1,18 @@
+zuul:
+  routes:
+    id:
+      path: /id/**
+      serviceId: id
+      sensitiveHeaders:
+    uaa:
+      path: /uaa/**
+      serviceId: auth
+      sensitiveHeaders:
+    messaging:
+      path: /messaging/**
+      serviceId: messaging
+      sensitiveHeaders:
+    config:
+      path: /config/**
+      serviceId: config
+      sensitiveHeaders:
