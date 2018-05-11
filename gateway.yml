@@ -12,10 +12,9 @@ zuul:
       path: /messaging/**
       serviceId: messaging
       sensitiveHeaders:
-    account-management:
-      path: /account-management/**
-      serviceId: account-management
-      strip-prefix: false
+    am:
+      path: /am/**
+      serviceId: account-managementß
       sensitiveHeaders:
     config:
       path: /config/**
