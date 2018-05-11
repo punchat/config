@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    bindings:
+      inviteToWorkspaceEvents:
+        destination: events.invitation.workspace
+        group: notifications-group
+        durableSubscription: true
+        content-type: application/json
+      accessCodeGeneratedEvents:
+        destination: events.accesscode.generated
+        group: notifications-group
+        durableSubscription: true
+        content-type: application/json
+      newEmailsEvents:
+        destination: events.emails.created
+        content-type: application/json
