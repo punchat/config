@@ -14,7 +14,7 @@ zuul:
       sensitiveHeaders:
     am:
       path: /am/**
-      serviceId: account-managementß
+      serviceId: account-management
       sensitiveHeaders:
     config:
       path: /config/**
