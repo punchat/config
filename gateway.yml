@@ -1,23 +1,18 @@
 zuul:
-  ignoredServices: '*'
+  sensitiveHeaders: Cookie, Set-Cookie
   routes:
     id:
       path: /id/**
       serviceId: id
-      sensitiveHeaders:
     uaa:
       path: /uaa/**
       serviceId: auth
-      sensitiveHeaders:
     messaging:
       path: /messaging/**
       serviceId: messaging
-      sensitiveHeaders:
     am:
       path: /am/**
       serviceId: am
-      sensitiveHeaders:
     config:
       path: /config/**
       serviceId: config
-      sensitiveHeaders:
