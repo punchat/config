@@ -13,3 +13,6 @@ spring:
         newMemberInChannel:
           destination: events.channel.member.created
           content-type: application/json
+        newBroadcastMessageEvents:
+          destination: events.channel.broadcast.messages.created
+          content-type: application/json
