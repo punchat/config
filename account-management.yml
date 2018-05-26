@@ -1,3 +1,6 @@
+punchat:
+  admin:
+    email: ${ADMIN_EMAIL}
 spring:
   cloud:
     stream:
