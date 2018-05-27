@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        newBroadcastMessageEvents:
+          destination: events.channel.broadcast.messages.created
+          content-type: application/json
