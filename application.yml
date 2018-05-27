@@ -15,6 +15,13 @@ swagger:
   security:
     access-token-uri: ${swaggerAccessTokenUri:http://206.189.50.160:8080/uaa/oauth/token}
 spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:206.189.50.160}:${POSTGRES_PORT:5432}/${DATABASE}
+    username: postgres
+    password: ${POSTGRES_PASSWORD:posuperpas}
+  jpa:
+    hibernate:
+      ddl-auto: update
   cloud:
     consul:
       discovery:
