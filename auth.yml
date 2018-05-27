@@ -52,3 +52,10 @@ uaa:
         - server
       grant-types:
         - client_credentials
+    -
+      client-id: ${TOPIC_SEARCH_SERVICE_CLIENT_ID:topics}
+      client-secret: ${TOPIC_SEARCH_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials
