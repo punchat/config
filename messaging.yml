@@ -16,3 +16,6 @@ spring:
         newBroadcastMessageEvents:
           destination: events.channel.broadcast.messages.created
           content-type: application/json
+        newDirectMessageEvents:
+          destination: events.channel.direct.messages.created
+          content-type: application/json
