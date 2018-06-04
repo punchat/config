@@ -22,3 +22,7 @@ zuul:
       path: /config/**
       serviceId: config
       sensitiveHeaders:
+    stomp:
+      path: /ws/**
+      serviceId: stomp
+      sensitiveHeaders:
