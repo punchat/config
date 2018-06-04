@@ -59,3 +59,10 @@ uaa:
         - server
       grant-types:
         - client_credentials
+    -
+      client-id: ${STOMP_NOTIFICATION_DELIVERY_SERVICE_CLIENT_ID:stomp}
+      client-secret: ${STOMP_NOTIFICATION_DELIVERY_SERVICE_CLIENT_SECRET:pass}
+      scopes:
+        - server
+      grant-types:
+        - client_credentials

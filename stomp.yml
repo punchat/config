@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        newBroadcastMessageEvents:
+          destination: events.channel.broadcast.messages.created
+          content-type: application/json
+          group: stomp-notification-delivery-group
+          durableSubscription: true
+        newDirectMessageEvents:
+          destination: events.channel.direct.messages.created
+          content-type: application/json
+          group: stomp-notification-delivery-group
+          durableSubscription: true
